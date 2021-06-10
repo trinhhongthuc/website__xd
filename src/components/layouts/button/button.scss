@@ -1,0 +1,15 @@
+@import "../../sass/base.scss";
+
+.btn__button {
+    padding: 8px 50px;
+    color: #fff;
+    font-size: 18px;
+    background-color: $color-secondary;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn__button:hover {
+    transform: scaleX(1.2);
+    transition: all 0.3s ease-in-out;
+}

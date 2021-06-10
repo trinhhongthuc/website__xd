@@ -1,0 +1,147 @@
+@import "../../sass/base.scss";
+
+// infomation
+.dynamo {
+    padding: 35px 0;
+    background-color: #f4f4f4;
+
+    &__heading {
+        font-size: 50px;
+        color: $color-secondary;
+        font-weight: bolder;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+}
+.info {
+    margin-bottom: 40px;
+    &__left {
+        background: #fff;
+        padding: 25px 22px;
+        margin: 0 12px;
+        height: 100%;
+    }
+    &__left__heading {
+        font-size: 30px;
+        color: $color-primary;
+        font-weight: bold;
+        margin-bottom: 12px;
+
+        span {
+            font-size: 45px;
+            color: $color-secondary;
+        }
+    }
+    &__left__paragraph {
+        font-size: 16px;
+        color: $color-primary;
+
+        a {
+            color: rgba($color-primary, 0.7);
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgba($color-primary, 0.9);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__right {
+        background: #fff;
+        padding: 25px 22px;
+        height: 100%;
+        margin: 0 15px;
+    }
+    &__right__heading {
+        text-align: center;
+        color: $color-primary;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    &__right__text {
+        font-size: 16px;
+        font-style: italic;
+        text-align: center;
+    }
+    &__right__img {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 0;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+    &__right__author {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__right__author__name {
+        font-size: 18px;
+        color: $color-primary;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+    &__right__author__job {
+        font-size: 16px;
+        color: $color-primary;
+    }
+}
+
+//// content
+
+.content {
+    background: $color-primary;
+    padding: 50px 0;
+    &__heading {
+        font-size: 40px;
+        color: #fff;
+        font-weight: 400;
+        margin-bottom: 12px;
+        text-align: center;
+
+        span {
+            font-size: 50px;
+            color: $color-secondary;
+        }
+    }
+    &__paragraph {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    &__update {
+        background-color: #fff;
+        padding: 20px 40px;
+    }
+    &__update__heading {
+        font-size: 25px;
+        color: $color-primary;
+        font-weight: bolder;
+        margin-bottom: 18px;
+    }
+    &__update__wrapper {
+    }
+    &__update__wrapper__heading {
+        font-size: 23px;
+        color: $color-primary;
+        font-weight: bolder;
+    }
+    &__update__wrapper__paragraph {
+        font-size: 17px;
+        color: $color-primary;
+        margin-bottom: 12px;
+    }
+}

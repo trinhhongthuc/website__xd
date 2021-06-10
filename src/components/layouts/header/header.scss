@@ -1,0 +1,88 @@
+@import "../../sass/base.scss";
+
+.header {
+    background: $color-primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+    height: 80px;
+
+    &__logo {
+        color: #fff;
+        font-size: 25px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__navbar {
+    }
+
+    &__logo__link {
+        font-size: 33px;
+        margin-left: 20px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bolder;
+        span {
+            font-size: 30px;
+            color: $color-secondary;
+        }
+    }
+
+    &__logo__link:hover {
+        color: #fff;
+    }
+}
+.navbar {
+    &__ul {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    &__ul__li {
+        padding: 0 15px;
+        list-style: none;
+    }
+    &__ul__li__link {
+        text-decoration: none;
+        font-size: 1.9rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__ul__li__link:hover {
+        color: $color-secondary;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.header-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 70px;
+    height: 60px;
+    border-radius: 0px;
+    background: #ffffff;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-scroll .header__logo__link {
+    color: $color-primary;
+}
+
+.header-scroll .navbar__ul__li__link {
+    color: $color-primary;
+}
+
+.active {
+    border-bottom: 4px solid $color-secondary;
+    padding-bottom: 10px;
+}
