@@ -1,0 +1,79 @@
+/// slide
+###
+POST  http://localhost:5000/addSlide
+Content-Type: application/json
+
+{
+    "title": "trinh hdadadassdong thudadac",
+    "img":"imdadadsadssdag",
+    "status": "thucdasd13dasddasda2"
+}
+
+###
+GET http://localhost:5000/slide
+
+
+###
+POST http://localhost:5000/addCourse
+Content-Type: application/json
+
+{
+    "title":"tji",
+    "author":"thucdasd13dasddasda2",
+    "description":"dasdasd",
+    "price":"dsadad",
+    "img":"imdadadsadss"
+
+}
+
+###
+GET http://localhost:5000/d
+
+
+###
+GET http://localhost:5000/getOneCourse/
+
+
+###
+POST http://localhost:5000/addCertificates
+Content-Type: application/json
+
+{
+    "img":"dsadadasd",
+    "title": "trinhhongthuc"
+}
+
+
+###
+GET http://localhost:5000/getCertificate?search=trinh
+
+
+
+###
+POST http://localhost:5000/loginAdmin
+Content-Type: application/json
+
+{
+    "username": "trinhhongthuc",
+    "password": "123456"
+}
+
+
+###
+POST http://localhost:5000/registerLoginAdmin
+Content-Type: application/json
+
+{
+     "username": "trinhhongthuc",
+    "password": "123456"
+
+}
+
+###
+PUT http://localhost:5000/changPassword
+headers: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRyaW5oaG9uZ3RodWMiLCJpZCI6IjYwZDQwNTRmNmMxZDA4MjU5ODYwYmM4ZiIsImlhdCI6MTYyNDUzNzA5NSwiZXhwIjoxNjI0NTQwNjk1fQ.G0Tp0ibL1AGCpZnzRyuOcauOb07E50d1fs0pdREDAXA
+
+
+###
+POST http://localhost:5000/refreshToken
+headers: {refreshToken :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRyaW5oaG9uZ3RodWMiLCJpZCI6IjYwZDQwNTRmNmMxZDA4MjU5ODYwYmM4ZiIsImlhdCI6MTYyNDU0MDg5NywiZXhwIjoxNjI0NTQwOTA3fQ.DqYlYuOj9ftehY2_Ho9HMH-jLY3SEtEVop93F7lj20g } 
