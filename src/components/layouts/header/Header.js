@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { Link as LInkScroll } from "react-scroll";
 const Header = () => {
   const [hidden, setHidden] = useState(false);
-  const history = useHistory();
 
   window.addEventListener("scroll", () => {
     const scroll = window.scrollY;
@@ -32,22 +31,21 @@ const Header = () => {
               </li>
 
               <li className="navbar__ul__li">
-                <LInkScroll
+                <NavLink
                   className="navbar__ul__li__link"
-                  activeClass="active"
                   path="/khoahoc"
-                  to="course"
+                  to="/course"
                   duration={200}
                 >
                   Khóa học
-                </LInkScroll>
-              </li>
-
-              <li className="navbar__ul__li">
-                <NavLink to="dynamo" className="navbar__ul__li__link">
-                  Dynamo
                 </NavLink>
               </li>
+
+              {/* <li className="navbar__ul__li">
+                <NavLink to="/dynamo" className="navbar__ul__li__link">
+                  Dynamo
+                </NavLink>
+              </li> */}
 
               <li className="navbar__ul__li">
                 <NavLink to="/chungchi" className="navbar__ul__li__link">
@@ -64,7 +62,6 @@ const Header = () => {
               <li className="navbar__ul__li">
                 <LInkScroll
                   className="navbar__ul__li__link"
-                  activeClass="active"
                   to="contact"
                   duration={400}
                 >
@@ -77,7 +74,7 @@ const Header = () => {
       );
     } else {
       return (
-        <div className="header-scroll">
+        <div className="header-scroll" id="header">
           <div className="header__logo">
             <Link to="/" className="header__logo__link">
               Imodel<span>.</span>vn
@@ -92,21 +89,20 @@ const Header = () => {
               </li>
 
               <li className="navbar__ul__li">
-                <LInkScroll
+                <NavLink
                   className="navbar__ul__li__link"
-                  activeClass="active"
-                  to="course"
+                  to="/course"
                   duration={200}
                 >
                   Khóa học
-                </LInkScroll>
-              </li>
-
-              <li className="navbar__ul__li">
-                <NavLink to="dynamo" className="navbar__ul__li__link">
-                  Dynamo
                 </NavLink>
               </li>
+              {/* 
+              <li className="navbar__ul__li">
+                <NavLink to="/dynamo" className="navbar__ul__li__link">
+                  Dynamo
+                </NavLink>
+              </li> */}
 
               <li className="navbar__ul__li">
                 <NavLink to="/chungchi" className="navbar__ul__li__link">
@@ -123,8 +119,7 @@ const Header = () => {
               <li className="navbar__ul__li">
                 <LInkScroll
                   className="navbar__ul__li__link"
-                  activeClass="active"
-                  to="contact"
+                  to="/contact"
                   duration={400}
                 >
                   Liên hệ

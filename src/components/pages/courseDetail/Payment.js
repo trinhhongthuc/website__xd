@@ -6,7 +6,7 @@ const Payment = () => {
     <div className="payment">
       <div className="container">
         <div className="row">
-          <div className="col-xl-12 col-lg-12">
+          <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <h1 className="course__outline__heading">Thanh toán học phí</h1>
           </div>
         </div>
@@ -14,7 +14,7 @@ const Payment = () => {
 
       <div className="container">
         <div className="row">
-          <div className="col-xl-4 col-lg-4">
+          <div className="col-xl-4 col-lg-4 col-ms-6 col-sm-12 col-12 margin__payment__box">
             <div className="payment__box">
               <div className="payment__box__heading">NGÂN HÀNG MBBANK</div>
 
@@ -36,7 +36,7 @@ const Payment = () => {
             </div>
           </div>
 
-          <div className="col-xl-4 col-lg-4">
+          <div className="col-xl-4 col-lg-4 col-ms-6 col-sm-12 col-12 margin__payment__box">
             <div className="payment__box">
               <div className="payment__box__heading">NGÂN HÀNG TECHCOMBANK</div>
 
@@ -58,7 +58,7 @@ const Payment = () => {
             </div>
           </div>
 
-          <div className="col-xl-4 col-lg-4">
+          <div className="col-xl-4 col-lg-4 col-ms-6 col-sm-12 col-12 margin__payment__box">
             <div className="payment__box">
               <div className="payment__box__heading">NGÂN HÀNG BIDV</div>
 

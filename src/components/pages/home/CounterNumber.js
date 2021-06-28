@@ -19,7 +19,7 @@ const CounterNumber = ({ end }) => {
       const formattedNumber = number.toLocaleString();
       document.getElementById("counter").innerText = formattedNumber;
     });
-  }, []);
+  }, [end]);
   return <div id="counter"></div>;
 };
 

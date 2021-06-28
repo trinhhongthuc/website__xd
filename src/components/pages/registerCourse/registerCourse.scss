@@ -6,6 +6,7 @@
     &__course {
         background: #f4f4f4;
         padding: 30px 0;
+        position: relative;
     }
 }
 
@@ -69,6 +70,12 @@
         border-radius: 5px;
     }
 
+    &__register__course__wrapper__input__error {
+        font-size: 13px;
+        color: red;
+        margin-top: 12px;
+    }
+
     &__register__course__wrapper__input:focus {
         box-shadow: 1px 1px 1px rgba($color-secondary, 0.8);
         border-color: $color-secondary;
@@ -79,7 +86,6 @@
     &__register__display {
         width: 100%;
         position: relative;
-
         select {
             width: 100%;
             font-size: 16px;
@@ -117,5 +123,141 @@
         color: #50c9c3;
         background: #fff;
         transition: all 0.2s ease-in-out;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        display: none;
+    }
+
+    .header__mobi {
+        display: flex;
+    }
+
+    .header-scroll {
+        display: none;
+    }
+    .register__course__paragraph {
+        margin-left: 40px;
+    }
+
+    .form__register__course__wrapper {
+        padding: 0;
+    }
+
+    .form__register__display select {
+        width: 50% !important;
+    }
+
+    .register__course {
+        padding-bottom: 0;
+    }
+    .form__register__course__wrapper {
+        padding: 0 0px;
+    }
+    .margin__payment__box {
+        margin: 10px 0px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+    .header {
+        display: none;
+    }
+
+    .header-scroll {
+        display: none;
+    }
+
+    .header__mobi {
+        display: flex;
+    }
+
+    .register__course__paragraph {
+        margin-left: 30px;
+    }
+
+    .counter {
+        padding: 50px 0 30px 0;
+    }
+
+    .form__register__display select {
+        width: 50% !important;
+    }
+
+    .register__course {
+        padding-bottom: 0;
+    }
+
+    .margin__payment__box {
+        margin: 10px 0px;
+    }
+
+    .form__register__course__wrapper {
+        padding: 0 0px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .header {
+        display: none;
+    }
+
+    .header__logo__link {
+        font-size: 30px;
+    }
+
+    .header-scroll {
+        display: none;
+    }
+
+    .header__mobi {
+        display: flex;
+        height: 75px;
+    }
+
+    .register__course {
+        padding-bottom: 0;
+    }
+
+    .margin__payment__box {
+        margin: 10px 0px;
+    }
+
+    .register__course__paragraph {
+        margin-left: 80px;
+    }
+    .form__register__display select {
+        width: 100% !important;
+    }
+
+    .form__register__course__wrapper {
+        padding: 0 0px;
+    }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .register__course__paragraph {
+        margin-left: 200px;
+    }
+
+    .register__course {
+        padding-bottom: 0;
+    }
+
+    .margin__payment__box {
+        margin: 10px 0px;
+    }
+
+    .register__course__paragraph {
+        margin-left: 180px;
+    }
+    .form__register__display select {
+        width: 100% !important;
+    }
+
+    .form__register__course__wrapper {
+        padding: 0 0px;
     }
 }

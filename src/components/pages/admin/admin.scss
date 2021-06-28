@@ -1,0 +1,625 @@
+@import "../../sass/base.scss";
+
+/////nav
+
+.hidden {
+    display: none !important;
+}
+
+.nav {
+    display: flex;
+    height: 70px;
+    background: $color-primary;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 200px;
+
+    &__logo {
+        color: #fff;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+    &__wrapper {
+        display: flex;
+        margin-right: 30px;
+        position: relative;
+    }
+    &__wrapper__notify {
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: $color-primary;
+        margin: 0 12px;
+        cursor: pointer;
+    }
+    &__wrapper__setting {
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: $color-primary;
+        margin: 0 12px;
+        cursor: pointer;
+    }
+
+    &__wrapper__setting:hover,
+    &__wrapper__notify:hover {
+        background-color: #ccbfbff4;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.nav {
+    &__wrapper__setting__ul {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        list-style: none;
+        padding: 0;
+        z-index: 90000;
+        margin: 0;
+        background-color: $color-secondary;
+        width: 150px;
+        color: #fff;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+        -webkit-animation: slide-top-slow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: slide-top-slow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+
+    &__wrapper__setting__ul::before {
+        content: "";
+        border: 12px solid;
+        position: absolute;
+        top: -24px;
+        right: 20px;
+        z-index: 10;
+        border-color: transparent transparent $color-secondary transparent;
+    }
+
+    &__wrapper__setting__ul__li {
+        padding: 6px 15px;
+        z-index: 15;
+        cursor: pointer;
+    }
+
+    &__wrapper__setting__ul__li:hover {
+        background-color: #c96565;
+    }
+}
+
+.nav__left {
+    width: 200px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #260d4bcc;
+}
+
+.nav {
+    &__left {
+    }
+    &__left__heading {
+        display: block;
+        text-decoration: none;
+        font-size: 30px;
+        text-align: center;
+        padding: 18px 12px;
+        color: $color-secondary;
+        font-weight: bolder;
+        border-bottom: 1px solid #ccc;
+    }
+
+    &__left__heading:hover {
+        color: $color-secondary;
+    }
+
+    &__left__ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    &__left__ul__li {
+        a {
+            font-size: 17px;
+            color: #fff;
+            padding: 12px 10px 8px 30px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #ccc;
+        }
+
+        a:hover {
+            background-color: hsla(0, 0%, 100%, 0.05);
+            color: #fff;
+        }
+    }
+}
+
+// admin__slide
+
+.admin {
+    margin-left: 200px;
+    padding: 20px 40px;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th,
+    td {
+        padding: 8px;
+        border: 1px solid #dee2e6;
+        font-size: 16px;
+        color: $color-primary;
+        text-transform: capitalize;
+        text-align: center;
+        // user-select: text;
+        button,
+        a {
+            padding: 6px 15px;
+            color: #fff;
+            font-size: 16px;
+            background-color: $color-primary;
+            border: none;
+            text-transform: uppercase;
+            border: 1px solid $color-primary;
+            text-decoration: none;
+        }
+
+        button:hover,
+        a:hover {
+            color: $color-primary;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    th {
+        height: 40px;
+        text-align: left;
+    }
+}
+
+.admin {
+    &__slide {
+    }
+    &__slide__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__slide__wrapper__heading {
+        font-size: 30px;
+        color: $color-primary;
+        font-weight: bold;
+    }
+    &__slide__wrapper__add {
+        a {
+            padding: 8px 18px;
+            color: #fff;
+            font-size: 16px;
+            background-color: $color-primary;
+            border: none;
+            text-transform: uppercase;
+            border: 1px solid $color-primary;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $color-primary;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__slide__title {
+        width: 200px;
+    }
+    &__slide__id {
+        width: 150px;
+    }
+    &__slide__img {
+        width: 200px;
+    }
+    &__slide__name {
+        width: 200px;
+    }
+    &__slide__status {
+        width: 100px;
+    }
+    &__slide__manipulation {
+        width: auto;
+        text-align: center;
+    }
+    .admin__facebook {
+        max-width: 200px !important;
+    }
+}
+
+// .admin__rows {
+//     // display: flex;
+//     // justify-content: space-around;
+//     width: auto;
+// }
+
+//// slide add
+
+.complete {
+    text-decoration: line-through;
+}
+.slide {
+    &__add {
+        margin-left: 200px;
+        padding: 40px 30px;
+    }
+
+    &__add__wrapper__heading {
+        font-size: 30px;
+        font-weight: bold;
+        color: $color-primary;
+        margin-bottom: 15px;
+    }
+
+    &__add__form {
+        width: 500px;
+    }
+
+    &__add__form > button {
+        padding: 8px 35px;
+        font-size: 16px;
+        color: #fff;
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        text-transform: uppercase;
+        margin: 25px 0;
+    }
+
+    &__add__form > button:hover {
+        background-color: transparent;
+        color: $color-primary;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__add__form__wrapper {
+        width: 100%;
+        margin-bottom: 14px;
+        label {
+            display: block;
+            font-size: 16px;
+            color: $color-primary;
+            margin-bottom: 12px;
+        }
+
+        input {
+            padding: 5px 12px;
+            width: 100%;
+            border: 1px solid #333;
+            outline: none;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #333;
+        }
+    }
+}
+
+.admin__slide__item__img {
+    width: 200px;
+    height: 70px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+///corse ////////////////////
+
+.admin {
+    &__course__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    &__course__wrapper__heading {
+        font-size: 30px;
+        color: $color-primary;
+        font-weight: bold;
+    }
+
+    &__course__wrapper__add {
+        a {
+            padding: 8px 18px;
+            color: #fff;
+            font-size: 16px;
+            background-color: $color-primary;
+            border: none;
+            text-transform: uppercase;
+            border: 1px solid $color-primary;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: $color-primary;
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__course__title {
+        width: 200px;
+    }
+
+    &__course__id {
+        width: 150px;
+    }
+
+    &__course__img {
+        width: 200px;
+    }
+
+    &__course__name {
+        width: 200px;
+    }
+
+    &__course__status {
+        width: 100px;
+    }
+
+    &__course__manipulation {
+        width: auto;
+        text-align: center;
+    }
+}
+
+.admin__course__item__img {
+    width: 200px;
+    height: 70px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+// course add
+
+.container {
+}
+.form {
+}
+.course {
+    // background: #f4f4f4;/
+    &__add {
+        margin-left: 200px;
+        padding: 30px 20px;
+    }
+    &__add__wrapper {
+        width: 100%;
+        margin: 0 20px;
+
+        label {
+            font-size: 16px;
+            color: $color-primary;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            font-size: 16px;
+            width: 100%;
+            padding: 5px 12px;
+            border: 1px solid #333;
+        }
+
+        .ck-editor {
+            font-size: 16px;
+        }
+    }
+    &__add__wrapper__input {
+        margin: 0 25px;
+        margin-bottom: 18px;
+
+        select {
+            width: 100%;
+            padding: 7px 12px;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            margin-top: 15px;
+        }
+    }
+    &__add__wrapper__textarea {
+        width: 100%;
+
+        label {
+            font-size: 16px;
+            color: $color-primary;
+            display: block;
+            margin-bottom: 8px;
+        }
+        textarea {
+            width: 100%;
+            height: 250px;
+            resize: none;
+            border: 1px solid #333;
+            font-size: 16px;
+        }
+    }
+
+    &__add__wrapper__textarea__mar {
+        margin: 0 25px;
+        font-size: 16px;
+    }
+    &__add__section {
+    }
+    &__add__section__wrapper {
+    }
+    &__add__section__wrapper__heading {
+    }
+}
+
+.course__add__wrapper__input__add {
+    padding: 8px 25px;
+    background: $color-primary;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.course__add__wrapper__input__add__ul {
+    margin: 0;
+    padding: 0;
+    margin: 0 25px;
+
+    &__li {
+        list-style: none;
+        margin-bottom: 12px;
+    }
+}
+
+.course__add__heading {
+    font-size: 30px;
+    color: $color-primary;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.course__add__addSub {
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 25px;
+    border: 1px solid $color-primary;
+    text-transform: uppercase;
+    background: $color-primary;
+}
+
+.course__add__addSub:hover {
+    background-color: #fff;
+    color: $color-primary;
+    transition: all 0.3s ease-in-out;
+}
+
+.course__add_display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.facebook,
+.email {
+    position: relative;
+}
+
+.facebook:hover .facebook__url,
+.email:hover .email__url {
+    display: block;
+    -webkit-animation: slide-top-slow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top-slow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.facebook__url,
+.email__url {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    color: #333;
+    background-color: #f4f4f4f4;
+    display: none;
+    margin: 0;
+    padding: 10px 16px;
+    user-select: all;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.change {
+    &__password__overlay {
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        z-index: 10000;
+    }
+}
+.form {
+    &__change {
+        width: 400px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        background: #f4f4f4f4;
+        padding: 0 20px;
+    }
+    &__change__heading {
+        display: block;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 25px;
+    }
+    &__change__wrapper {
+    }
+
+    &__change__wrapper__error {
+        font-size: 14px;
+        color: red;
+        margin: 5px 0;
+        // margin-top: 5px;
+    }
+
+    &__change__button {
+        display: block;
+        padding: 25px 0;
+        text-align: center;
+
+        button {
+            padding: 5px 15px;
+            font-size: 16px;
+            border: 1px solid $color-primary;
+            outline: none;
+            background-color: $color-primary;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: $color-primary;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+    &__change__wrapper__label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    &__register__course__wrapper__input {
+    }
+    &__register__course__wrapper__input__error {
+    }
+}

@@ -11,7 +11,7 @@ const Introduce = () => {
     <div className="introduce" data-aos="fade-up" data-aos-duration="1000">
       <div className="container">
         <div className="row">
-          <div className="col-xl-6 col-lg-6">
+          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <h1 className="introduce__heading">
               <span>V</span>ề chúng tôi
             </h1>
@@ -38,7 +38,7 @@ const Introduce = () => {
             </p>
           </div>
 
-          <div className="col-xl-6 col-lg-6">
+          <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
             <div className="introduce__img">
               <img src={introduceImg} alt="introduce" />
             </div>

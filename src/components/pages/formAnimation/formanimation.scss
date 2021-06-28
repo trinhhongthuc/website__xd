@@ -1,0 +1,41 @@
+@import "../../sass/base.scss";
+
+.form {
+    &__animation {
+        width: 350px;
+        height: 80px;
+        background-color: $color-secondary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // padding: 12px 15px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+        z-index: 100000;
+    }
+    &__animation__title {
+        font-size: 16px;
+        margin: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #fff;
+        padding-left: 15px;
+    }
+    &__animation__icon {
+        font-size: 16px;
+        color: #fff;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+    }
+
+    &__animation__icon:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+}

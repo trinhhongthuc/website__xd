@@ -1,16 +1,17 @@
 import React from "react";
-import courseImg from "../../image/course_item.png";
 import { Link } from "react-router-dom";
-const CourseBox = () => {
+const CourseBox = ({ data }) => {
   return (
-    <div className="col-xl-4 col-lg-4">
-      <Link to="/detail" className="course__box">
+    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+      <Link to={`/course/detail/${data._id}`} className="course__box">
         <div className="course__box__img">
-          <img src={courseImg} alt="course item" />
+          <img src={data.img} alt="course item" />
         </div>
 
         <div className="course__box__title">
-          Revit Khối lượng chỉ từ 159,000/buổi
+          {data.title.length > 35
+            ? data.title.slice(0, 35) + "..."
+            : data.title}
         </div>
       </Link>
     </div>

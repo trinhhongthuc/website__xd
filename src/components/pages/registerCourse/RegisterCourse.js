@@ -1,19 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import FormRegisterCourse from "./FormRegisterCourse";
 import Counter from "../home/Counter.js";
 import Contact from "../home/Contact.js";
-import { animateScroll as scroll } from "react-scroll";
+import { useSelector, useDispatch } from "react-redux";
+import FormAnimation from "../formAnimation/FormAnimation";
+import Payment from "../courseDetail/Payment";
 
 const RegisterCourse = () => {
+  const dispatch = useDispatch();
+  const [hiddenNotify, setHiddenNotify] = useState(false);
   useEffect(() => {
-    // let scroll = animateScroll;
-    scroll.scrollToTop();
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
   }, []);
+  const { notifycation } = useSelector((state) => state.registerCourseReducer);
+
+  useEffect(() => {
+    if (notifycation) {
+      setHiddenNotify(true);
+
+      setTimeout(() => {
+        dispatch({ type: "HIDDEN_NOTIFICATION" });
+        setHiddenNotify(false);
+      }, 3000);
+    }
+    return {};
+  }, [notifycation, dispatch]);
+
   return (
     <div className="register__course">
       <div className="container">
         <div className="row">
-          <div className="col-xl-12 col-lg-12 register__course__top">
+          <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 register__course__top">
             <h1 className="register__course__heading">
               <span>Đ</span>ăng ký khóa học
             </h1>
@@ -40,8 +59,18 @@ const RegisterCourse = () => {
 
       <FormRegisterCourse />
 
+      <Payment />
+
       <Counter />
       <Contact />
+      {hiddenNotify ? (
+        <FormAnimation
+          setHiddenNotify={setHiddenNotify}
+          title="Đăng ký khóa học thành công"
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

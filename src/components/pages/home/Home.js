@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
 import Contact from "./Contact";
 import Counter from "./Counter";
@@ -6,23 +6,65 @@ import Course from "./Course";
 import FeedBack from "./FeedBack";
 import Introduce from "./Introduce";
 import Project from "./Project";
-import { animateScroll as scroll } from "react-scroll";
+import { useSelector } from "react-redux";
+import { Ring } from "react-awesome-spinners";
+import FormAnimation from "../formAnimation/FormAnimation";
 
 const Home = () => {
   useEffect(() => {
-    scroll.scrollToTop();
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
   }, []);
 
+  const [hiddenNotify, setHiddenNotify] = useState(false);
+  const { isLoading, notifycation } = useSelector(
+    (state) => state.contactReducer
+  );
+  const style = {
+    width: "100%",
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  };
+
+  useEffect(() => {
+    if (notifycation) {
+      setHiddenNotify(true);
+    }
+    setTimeout(() => {
+      setHiddenNotify(false);
+    }, 3000);
+  }, [notifycation]);
+
   return (
-    <div className="home">
-      <Banner />
-      <Introduce />
-      <Course />
-      <Counter />
-      <Project />
-      <FeedBack />
-      <Contact />
-    </div>
+    <>
+      {isLoading ? (
+        <div style={style}>
+          <Ring />
+        </div>
+      ) : (
+        <div className="home">
+          <Banner />
+          <Introduce />
+          <Course />
+          <Counter />
+          <Project />
+          <FeedBack />
+          <Contact />
+
+          {hiddenNotify ? (
+            <FormAnimation
+              setHiddenNotify={setHiddenNotify}
+              title="Thông tin liên hệ đã gửi thành công"
+            />
+          ) : (
+            ""
+          )}
+        </div>
+      )}
+    </>
   );
 };
 

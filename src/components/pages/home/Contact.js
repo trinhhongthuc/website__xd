@@ -1,12 +1,26 @@
 import React, { useEffect } from "react";
-import Button from "../../layouts/button/Button";
 import logo from "../../image/logo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { contactForm } from "../../../redux/actions/action";
+
 const Contact = () => {
+  const dispatch = useDispatch();
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    dispatch(contactForm(data));
+  };
   return (
     <div
       className="contact"
@@ -16,7 +30,7 @@ const Contact = () => {
     >
       <div className="container">
         <div className="row">
-          <div className="col-xl-4  col-lg-4 offset-4 ">
+          <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 offset-md-3 offset-xl-4 offset-lg-4 ">
             <div className="contact__title">
               <span>L</span>ien he
             </div>
@@ -24,33 +38,46 @@ const Contact = () => {
         </div>
 
         <div className="row">
-          <div className="col-xl-3 col-lg-3">
-            <div className="contact__left">
+          <div className="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+            <form className="contact__left" onSubmit={handleSubmit(onSubmit)}>
               <div className="contact__left__title">Send message</div>
               <input
-                type="text"
-                name="name"
-                id=""
+                {...register("name", {
+                  required: true,
+                  maxLength: 20,
+                  minLength: 2,
+                })}
+                placeholder="Name"
                 className="form-control__contact"
               />
+              <p className="contact__left__error">
+                {errors.name?.type === "required" && "*Name is required"}
+              </p>
+
               <input
-                type="text"
-                name="name"
-                id=""
+                {...register("email", { required: true })}
+                placeholder="Email"
                 className="form-control__contact"
+                type="email"
               />
+              <p className="contact__left__error">
+                {errors.email?.type === "required" && "*Name is required"}
+              </p>
+
               <input
-                type="text"
-                name="name"
-                id=""
+                {...register("message", { required: true })}
+                placeholder="Message"
                 className="form-control__contact"
               />
+              <p className="contact__left__error">
+                {errors.message?.type === "required" && "*Message is required"}
+              </p>
 
               <button className="contact__left__btn">Send </button>
-            </div>
+            </form>
           </div>
 
-          <div className="col-xl-8 col-lg-8">
+          <div className="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
             <div className="contact__right">
               <div className="contact__right__wrapper">
                 <h1 className="contact__right__heading">Information</h1>

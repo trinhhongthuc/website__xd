@@ -1,10 +1,8 @@
 import React from "react";
-import certificate from "../../image/certificate.png";
-import BoxCertificate from "./BoxCertificate";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const TemplateCertificate = () => {
+const TemplateCertificate = ({ dataTemplate }) => {
   React.useEffect(() => {
     AOS.init();
   }, []);
@@ -31,21 +29,15 @@ const TemplateCertificate = () => {
 
       <div className="container">
         <div className="row template__certificate__box ">
-          <div className="col-xl-4 col-lg-4">
-            <div className="template__certificate__wrapper">
-              <img src={certificate} alt="" />
-            </div>
-          </div>
-          <div className="col-xl-4 col-lg-4 ">
-            <div className="template__certificate__wrapper">
-              <img src={certificate} alt="" />
-            </div>
-          </div>
-          <div className="col-xl-4 col-lg-4">
-            <div className="template__certificate__wrapper">
-              <img src={certificate} alt="" />
-            </div>
-          </div>
+          {dataTemplate?.map((item) => {
+            return (
+              <div className="col-xl-4 col-lg-4" key={item._id}>
+                <div className="template__certificate__wrapper">
+                  <img src={item.img} alt="" />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
