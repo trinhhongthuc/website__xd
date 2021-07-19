@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const auth = (req, res, next) => {
   const token = req.headers.authorization.split(" ")[1];
-  if (!token) res.json({ success: false, message: "tone is empty" });
+  if (!token) res.json({ success: false, message: "token is empty" });
 
   try {
     const tokenVeification = jwt.verify(token, process.env.SECRET_KEY_TOKEN);
