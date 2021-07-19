@@ -45,9 +45,7 @@ const CourseDetail = () => {
               <div className="col-xl-4 col-lg-4">
                 <div className="courses__detail__left">
                   <div className="courses__detail__left__heading">
-                    {courseDetail.title.length > 25
-                      ? courseDetail.title.slice(0, 25) + "..."
-                      : courseDetail.title}
+                    {courseDetail.title}
                   </div>
                   {courseDetail.section.map((item, index) => {
                     return <Accordion key={uuidv4()} title={item}></Accordion>;

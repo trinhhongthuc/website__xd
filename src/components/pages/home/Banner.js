@@ -35,13 +35,7 @@ const Banner = () => {
         </LoadingMask>
       ) : (
         <div className="banner" data-aos="fade-up" data-aos-duration="1000">
-          <Carousel slides={slides} required autoplay={true} interval={2500} />
-          <div className="wrapper__banner">
-            <h1 className="banner__title">Khóa Học ưu đãi</h1>
-            <LInkScroll to="course" duration={200} offset={-80}>
-              <Button />
-            </LInkScroll>
-          </div>
+          <Carousel slides={slides} required autoplay={true} interval={1500} />
         </div>
       )}
     </>

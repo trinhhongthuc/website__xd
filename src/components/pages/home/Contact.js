@@ -32,7 +32,7 @@ const Contact = () => {
         <div className="row">
           <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 offset-md-3 offset-xl-4 offset-lg-4 ">
             <div className="contact__title">
-              <span>L</span>ien he
+              <span>L</span>iên hệ
             </div>
           </div>
         </div>
@@ -86,22 +86,20 @@ const Contact = () => {
                   <li className="contact__right__ul__li">iModel.vn</li>
 
                   <li className="contact__right__ul__li">
-                    Địa chỉ: Hà Nội, Việt Nam
+                    Địa chỉ: Liên chiểu Đà Nẵng
                   </li>
 
                   <li className="contact__right__ul__li">Website: imodel.vn</li>
 
                   <li className="contact__right__ul__li">
-                    Facebook: fb.com/insidethemodel
+                    Facebook: https://www.facebook.com/ReSSDaNang
                   </li>
 
                   <li className="contact__right__ul__li">
                     Mail: insidethemodel@gmail.com
                   </li>
 
-                  <li className="contact__right__ul__li">
-                    Mobile: (+84)969 886 620
-                  </li>
+                  <li className="contact__right__ul__li">Mobile: 0931626629</li>
                 </ul>
               </div>
               <div className="contact__right__logo">

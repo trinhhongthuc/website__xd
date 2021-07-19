@@ -1,5 +1,5 @@
-import React from "react";
 import { Route, Switch } from "react-router-dom";
+import React, { Suspense, useEffect, useState } from "react";
 
 const AdminHome = React.lazy(() => import("./AdminHome"));
 
@@ -50,44 +50,9 @@ const Admin = () => {
   return (
     <>
       {/* <Suspense fallback={<h2>Loading...</h2>}> */}
-      <NavTop />
-      <NavLeft />
-      <HiddenHeader />
-      <Switch>
-        <Route exact path="/admin" component={AdminHome} />
-        <Route exact path="/admin/slide" component={Slide} />
-        <Route exact path="/admin/slide/add" component={SlideAdd} />
-        <Route exact path="/admin/course" component={Course} />
-        <Route exact path="/admin/course/add" component={CourseAdd} />
-        <Route exact path="/admin/course/detail/:id" component={CourseDetail} />
-        <Route exact path="/admin/course/update/:id" component={CourseUpdate} />
-        <Route exact path="/admin/project" component={Project} />
-        <Route exact path="/admin/project/add" component={ProjectAdd} />
-        <Route
-          exact
-          path="/admin/project/detail/:id"
-          component={ProjectDetail}
-        />
-        <Route
-          exact
-          path="/admin/project/update/:id"
-          component={ProjectUpdate}
-        />
-        <Route exact path="/admin/post/" component={Post} />
-        <Route exact path="/admin/post/add" component={PostAdd} />
 
-        <Route exact path="/admin/post/detail" component={PostDetail} />
-        <Route exact path="/admin/post/detail/:id" component={PostDetail} />
-        <Route exact path="/admin/post/update" component={PostUpdate} />
-        <Route exact path="/admin/post/update/:id" component={PostUpdate} />
-        <Route exact path="/admin/boxrun" component={BoxRun} />
-        <Route exact path="/admin/boxrun/add" component={BoxRunAdd} />
-        <Route exact path="/admin/boxrun/update" component={BoxRunUpdate} />
-        <Route exact path="/admin/boxrun/update/:id" component={BoxRunUpdate} />
-
-        <Route exact path="/admin/certificate" component={Certificate} />
-        <Route exact path="/admin/certificate/add" component={CertificateAdd} />
-      </Switch>
+      {/* <HiddenHeader /> */}
+      <Switch></Switch>
       {/* </Suspense> */}
     </>
   );

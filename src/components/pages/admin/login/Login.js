@@ -32,7 +32,7 @@ const Login = () => {
   const { isLogin, error } = useSelector((state) => state.loginReducer);
 
   useEffect(() => {
-    if (isLogin && localStorage.getItem("token")) {
+    if (isLogin && sessionStorage.getItem("token")) {
       history.push("/admin");
     }
   }, [history, isLogin]);

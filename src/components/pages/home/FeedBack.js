@@ -30,7 +30,7 @@ const FeedBack = () => {
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <h1 className="feedback__title">
-                  <span>P</span>han hoi cua hoc vien
+                  <span>P</span>hản hồi của học viên
                 </h1>
               </div>
 

@@ -16,7 +16,7 @@ const LoginApi = {
     const url = "refreshToken";
     return await axiosClient.get(url, {
       headers: {
-        refreshToken: "Bearer " + localStorage.getItem("refreshToken"),
+        refreshToken: "Bearer " + sessionStorage.getItem("refreshToken"),
       },
     });
   },

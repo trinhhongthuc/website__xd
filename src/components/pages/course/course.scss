@@ -3,6 +3,7 @@
 .courses {
     padding: 40px;
     background: #f4f4f4;
+    overflow: hidden;
     &__box {
         padding: 10px;
         background-color: #fff;
@@ -10,6 +11,7 @@
         flex-direction: column;
         box-shadow: 1px 1px 10px rgba($color-primary, 0.5);
         margin-bottom: 18px;
+        height: 100%;
     }
 
     &__box__wrapper {

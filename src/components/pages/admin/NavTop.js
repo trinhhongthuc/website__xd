@@ -16,13 +16,13 @@ const NavTop = () => {
   }, [hiddenSettings]);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     const data = jwt_decode(token);
     setUsername(data.username);
   }, []);
 
   const onClickLogOut = useCallback(() => {
-    localStorage.clear("token");
+    sessionStorage.getItem.clear("token");
     history.push("/login");
   }, [history]);
 

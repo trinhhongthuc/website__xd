@@ -6,7 +6,10 @@ import NumberFormat from "react-number-format";
 
 const CourseBox = ({ data }) => {
   return (
-    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
+    <div
+      className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12"
+      style={{ marginBottom: "16px" }}
+    >
       <div className="courses__box">
         <Link
           to={`/course/detail/${data._id}`}

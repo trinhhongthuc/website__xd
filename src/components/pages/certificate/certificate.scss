@@ -6,6 +6,8 @@
     background: #f4f4f4;
     padding: 50px 0 0 0;
     position: relative;
+    overflow: hidden;
+
     &__heading {
         font-size: 50px;
         color: $color-secondary;

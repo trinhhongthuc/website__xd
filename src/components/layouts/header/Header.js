@@ -41,12 +41,6 @@ const Header = () => {
                 </NavLink>
               </li>
 
-              {/* <li className="navbar__ul__li">
-                <NavLink to="/dynamo" className="navbar__ul__li__link">
-                  Dynamo
-                </NavLink>
-              </li> */}
-
               <li className="navbar__ul__li">
                 <NavLink to="/chungchi" className="navbar__ul__li__link">
                   Chứng chỉ
@@ -119,7 +113,7 @@ const Header = () => {
               <li className="navbar__ul__li">
                 <LInkScroll
                   className="navbar__ul__li__link"
-                  to="/contact"
+                  to="contact"
                   duration={400}
                 >
                   Liên hệ

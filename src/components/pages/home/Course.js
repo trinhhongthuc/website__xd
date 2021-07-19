@@ -34,9 +34,7 @@ const Course = () => {
           <div className="container">
             <div className="row">
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                <h1 className="course__title">
-                  <span>K</span>hoa hoc
-                </h1>
+                <h1 className="course__title">Khóa học</h1>
               </div>
 
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">

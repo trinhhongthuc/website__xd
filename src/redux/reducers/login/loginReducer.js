@@ -19,8 +19,8 @@ const loginReducer = (state = initState, action) => {
         error: "",
       };
     case types.LOGIN_SUCCESS:
-      localStorage.setItem("token", action.payload.token);
-      localStorage.setItem("refreshToken", action.payload.refreshToken);
+      sessionStorage.setItem("token", action.payload.token);
+      sessionStorage.setItem("refreshToken", action.payload.refreshToken);
       return {
         ...state,
         isLoading: false,
@@ -61,8 +61,8 @@ const loginReducer = (state = initState, action) => {
         isLoading: true,
       };
     case types.REFRESH_TOKEN_SUCCESS:
-      localStorage.setItem("token", action.payload.token);
-      localStorage.setItem("refreshToken", action.payload.refreshToken);
+      sessionStorage.setItem("token", action.payload.token);
+      sessionStorage.setItem("refreshToken", action.payload.refreshToken);
       return {
         ...state,
         isLoading: false,
