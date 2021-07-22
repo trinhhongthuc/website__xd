@@ -67,7 +67,6 @@ const courseReducerAdmin = (state = initState, action) => {
       const dataFilter = state.dataCourse.filter((item) => {
         return item._id !== action.payload;
       });
-      console.log(dataFilter);
       return {
         ...state,
         dataCourse: dataFilter,

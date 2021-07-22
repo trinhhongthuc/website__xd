@@ -12,6 +12,7 @@ import certificateReducer from "./certificate/certificateReducer.js";
 import certificateReducerAdmin from "./Admin/certificateReducerAdmin.js";
 import AdminHomeReducer from "./Admin/AdminHomeReducer";
 import loginReducer from "./login/loginReducer";
+import DocumentReducerAdmin from "./Admin/DocumentReducerAdmin";
 
 const rootReducer = combineReducers({
   slideReducerAdmin: slideReducerAdmin,
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
   certificateReducerAdmin: certificateReducerAdmin,
   AdminHomeReducer: AdminHomeReducer,
   loginReducer: loginReducer,
+  DocumentReducerAdmin: DocumentReducerAdmin,
 });
 
 export default rootReducer;

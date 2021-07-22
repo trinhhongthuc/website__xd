@@ -22,7 +22,7 @@ const NavTop = () => {
   }, []);
 
   const onClickLogOut = useCallback(() => {
-    sessionStorage.getItem.clear("token");
+    sessionStorage.clear("token");
     history.push("/login");
   }, [history]);
 

@@ -24,6 +24,12 @@ import BoxRunAdd from "components/pages/admin/boxrun/BoxRunAdd.js";
 import BoxRunUpdate from "components/pages/admin/boxrun/BoxRunUpdate.js";
 import CertificateAdd from "components/pages/admin/certificate/CertificateAdd.js";
 import CertificateAdmin from "components/pages/admin/certificate/Certificate.js";
+import Document from "components/pages/document/Document.jsx";
+import DocumentAdmin from "components/pages/admin/documentAdmin/DocumentAdmin.js";
+import DocumentAdminAdd from "components/pages/admin/documentAdmin/DocumentAdminAdd.js";
+import DocumentAdminUpdate from "components/pages/admin/documentAdmin/DocumentAdminUpdate.js";
+import DocumentAdminDetail from "components/pages/admin/documentAdmin/DocumentAdminDetail.js";
+import Recruit from "components/pages/recruit/Recruit.js";
 
 const Home = React.lazy(() => import("./components/pages/home/Home.js"));
 
@@ -95,6 +101,10 @@ function App() {
               path="/course/detail/:id"
               component={CourseDetail}
             />
+
+            <PublicRouter exact path="/tailieu" component={Document} />
+            <PublicRouter exact path="/tuyendung" component={Recruit} />
+
             {/* router Login */}
             <Route exact path="/login" component={Login} />
             {/* Router admin */}
@@ -186,6 +196,29 @@ function App() {
               exact
               path="/admin/certificate/add"
               component={CertificateAdd}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tailieu"
+              component={DocumentAdmin}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tailieu/add"
+              component={DocumentAdminAdd}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tailieu/update/:id"
+              component={DocumentAdminUpdate}
+            />
+            <PrivateRouter
+              exact
+              path="/admin/tailieu/detail/:id"
+              component={DocumentAdminDetail}
             />
           </Switch>
         </Router>

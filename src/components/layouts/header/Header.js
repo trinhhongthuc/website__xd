@@ -54,6 +54,18 @@ const Header = () => {
               </li>
 
               <li className="navbar__ul__li">
+                <NavLink to="/tuyendung" className="navbar__ul__li__link">
+                  Tuyển dụng
+                </NavLink>
+              </li>
+
+              <li className="navbar__ul__li">
+                <NavLink to="/tailieu" className="navbar__ul__li__link">
+                  Tài liệu
+                </NavLink>
+              </li>
+
+              <li className="navbar__ul__li">
                 <LInkScroll
                   className="navbar__ul__li__link"
                   to="contact"
@@ -91,12 +103,6 @@ const Header = () => {
                   Khóa học
                 </NavLink>
               </li>
-              {/* 
-              <li className="navbar__ul__li">
-                <NavLink to="/dynamo" className="navbar__ul__li__link">
-                  Dynamo
-                </NavLink>
-              </li> */}
 
               <li className="navbar__ul__li">
                 <NavLink to="/chungchi" className="navbar__ul__li__link">
@@ -107,6 +113,18 @@ const Header = () => {
               <li className="navbar__ul__li">
                 <NavLink to="/dangkykhoahoc" className="navbar__ul__li__link">
                   Đăng ký khóa học
+                </NavLink>
+              </li>
+
+              <li className="navbar__ul__li">
+                <NavLink to="/tuyendung" className="navbar__ul__li__link">
+                  Tuyển dụng
+                </NavLink>
+              </li>
+
+              <li className="navbar__ul__li">
+                <NavLink to="/tailieu" className="navbar__ul__li__link">
+                  Tài liệu
                 </NavLink>
               </li>
 

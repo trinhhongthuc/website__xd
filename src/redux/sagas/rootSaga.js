@@ -11,7 +11,7 @@ import certificateSaga from "./certificateSaga/certificateSaga.js";
 import certificateSagaAdmin from "./Admin/certificateSagaAdmin";
 import AdminHomeSaga from "./Admin/AdminHomeSaga";
 import loginSaga from "./login/loginSaga";
-
+import DocumentSagaAdmin from "./Admin/DocumentSagaAdmin";
 function* rootSaga() {
   yield all([
     slideSagaAdmin(),
@@ -26,6 +26,7 @@ function* rootSaga() {
     certificateSagaAdmin(),
     AdminHomeSaga(),
     loginSaga(),
+    DocumentSagaAdmin(),
   ]);
 }
 

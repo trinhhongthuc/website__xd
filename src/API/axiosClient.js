@@ -3,7 +3,7 @@ import queryString from "query-string";
 import jwt_decode from "jwt-decode";
 import LoginApi from "./LoginApi";
 import { Redirect } from "react-router-dom";
-const URL = "https://web-xd.herokuapp.com/";
+const URL = "http://localhost:5000";
 const axiosClient = axios.create({
   baseURL: URL,
   headers: { "Content-Type": "application/json" },

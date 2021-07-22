@@ -1,0 +1,79 @@
+.document-heading {
+    font-size: 25px;
+    color: $color-primary;
+    text-align: center;
+    padding: 25px 0px;
+
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.box {
+    &-document-wrapper {
+        padding: 12px;
+        background: #f4f4f4;
+        border-bottom: 1px solid #ccc;
+    }
+    &-document-title {
+        font-size: 22px;
+        color: $color-primary;
+        text-transform: capitalize;
+    }
+    &-document-dateupdate {
+        font-size: 16px;
+        color: $color-primary;
+        margin-bottom: 0;
+    }
+    &-document-download {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: $color-primary;
+    }
+    &-document-note {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: $color-primary;
+    }
+}
+
+.box {
+    &-re-wrapper {
+        display: flex;
+        padding: 12px;
+        background: #f4f4f4;
+        border-bottom: 1px solid #ccc;
+
+        text-decoration: none;
+    }
+    &-re-wrapper-img {
+        width: 150px;
+        height: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-re-wrapper-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 12px;
+        font-size: 16px;
+        color: $color-primary;
+        text-transform: capitalize;
+
+        width: calc(100% - 150px);
+    }
+}
+.box-re-title {
+    font-size: 18px;
+    color: $color-primary;
+
+    text-transform: uppercase;
+    background-color: #f4f4f4;
+
+    text-align: center;
+    margin-bottom: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
