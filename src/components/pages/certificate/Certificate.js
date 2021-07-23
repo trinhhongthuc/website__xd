@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Counter from "../home/Counter";
 import TemplateCertificate from "./TemplateCertificate";
-import Contact from "../home/Contact.js";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { getCertificate } from "../../../redux/actions/action";
@@ -122,7 +121,7 @@ const Certificate = () => {
 
       <Counter />
       <TemplateCertificate dataTemplate={dataTemplate} />
-      <Contact />
+
       {hiddenListBox ? (
         <ListItemCertificate setHiddenListBox={setHiddenListBox} />
       ) : (

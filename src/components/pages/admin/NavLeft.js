@@ -34,6 +34,10 @@ const NavLeft = () => {
         <li className="nav__left__ul__li">
           <Link to="/admin/tailieu">Tài liệu</Link>
         </li>
+
+        <li className="nav__left__ul__li">
+          <Link to="/admin/tuyendung">Tuyển dụng</Link>
+        </li>
       </ul>
     </div>
   );

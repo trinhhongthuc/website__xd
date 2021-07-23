@@ -30,6 +30,10 @@ import DocumentAdminAdd from "components/pages/admin/documentAdmin/DocumentAdmin
 import DocumentAdminUpdate from "components/pages/admin/documentAdmin/DocumentAdminUpdate.js";
 import DocumentAdminDetail from "components/pages/admin/documentAdmin/DocumentAdminDetail.js";
 import Recruit from "components/pages/recruit/Recruit.js";
+import RecruitAdmin from "components/pages/admin/recruitAdmin/RecruitAdmin.js";
+import RecruitAdminAdd from "components/pages/admin/recruitAdmin/RecruitAdminAdd.js";
+import RecruitAdminUpdate from "components/pages/admin/recruitAdmin/RecruitAdminUpdate.js";
+import RecruitAdminDetail from "components/pages/admin/recruitAdmin/RecruitAdminDetail.js";
 
 const Home = React.lazy(() => import("./components/pages/home/Home.js"));
 
@@ -219,6 +223,30 @@ function App() {
               exact
               path="/admin/tailieu/detail/:id"
               component={DocumentAdminDetail}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tuyendung"
+              component={RecruitAdmin}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tuyendung/add"
+              component={RecruitAdminAdd}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tuyendung/update/:id"
+              component={RecruitAdminUpdate}
+            />
+
+            <PrivateRouter
+              exact
+              path="/admin/tuyendung/detail/:id"
+              component={RecruitAdminDetail}
             />
           </Switch>
         </Router>

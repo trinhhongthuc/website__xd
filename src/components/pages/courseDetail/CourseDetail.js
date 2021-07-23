@@ -8,7 +8,6 @@ import CourseOutline from "./CourseOutline";
 import Counter from "../home/Counter";
 import bannerImg from "../../image/autodesk.jpg";
 import Payment from "./Payment";
-import Contact from "../home/Contact.js";
 
 const CourseDetail = () => {
   useEffect(() => {
@@ -222,8 +221,6 @@ const CourseDetail = () => {
       </div>
 
       <Payment />
-
-      <Contact />
     </div>
   );
 };

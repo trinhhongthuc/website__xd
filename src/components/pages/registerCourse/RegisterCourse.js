@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FormRegisterCourse from "./FormRegisterCourse";
 import Counter from "../home/Counter.js";
-import Contact from "../home/Contact.js";
 import { useSelector, useDispatch } from "react-redux";
 import FormAnimation from "../formAnimation/FormAnimation";
 import Payment from "../courseDetail/Payment";
@@ -62,7 +61,6 @@ const RegisterCourse = () => {
       <Payment />
 
       <Counter />
-      <Contact />
       {hiddenNotify ? (
         <FormAnimation
           setHiddenNotify={setHiddenNotify}

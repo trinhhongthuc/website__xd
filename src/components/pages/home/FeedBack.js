@@ -36,8 +36,13 @@ const FeedBack = () => {
 
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <p className="feedback__paragraph">
-                  <b>iModel.vn</b> luôn tự hào là đơn vị cung cấp dịch vụ tốt
-                  nhất về chất lượng, chi phí và các chế độ hậu mãi.
+                  Sau 3 năm thành lập hiện tại học viên tại <b>RESS</b> đã đạt
+                  gần 1500 học viên. Và điều mà <b>RESS</b> làm được đó là ngoài
+                  mang lại giá trị cho người học{" "}
+                  <i>“Kiến thức chuyên môn + Kỹ năng nghề nghiệp”</i> thì{" "}
+                  <b>RESS</b> còn mang lại cho người học sự chu đáo và thấu
+                  hiểu. Để học viên hiểu rằng{" "}
+                  <i>“Họ sẽ không đơn độc ngay cả sau khi kết thúc khóa học”</i>
                 </p>
               </div>
             </div>

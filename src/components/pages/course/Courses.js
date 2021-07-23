@@ -5,7 +5,6 @@ import Paginations from "./Paginations.js";
 import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { pagination } from "../../../redux/actions/action";
-import Contact from "../home/Contact.js";
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }

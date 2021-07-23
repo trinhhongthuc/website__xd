@@ -45,6 +45,10 @@
 
         text-decoration: none;
     }
+
+    &-re-wrapper:last-child {
+        border-bottom: none;
+    }
     &-re-wrapper-img {
         width: 150px;
         height: 100px;

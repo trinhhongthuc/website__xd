@@ -1,6 +1,6 @@
 import React from "react";
 import ReactHtmlParser from "react-html-parser";
-
+import moment from "moment";
 const BoxDocument = ({ document }) => {
   return (
     <div className="col-xl-8 col-lg-8">
@@ -10,11 +10,11 @@ const BoxDocument = ({ document }) => {
             <div className="box-document-wrapper" key={item._id}>
               <h4 className="box-document-title">{item.title}</h4>
               <p className="box-document-dateupdate">
-                Ngay update {item.dateUpdate}
+                Ngày đăng: {moment(item.dateUpdate).format("LLL")}
               </p>
 
               <p className="box-document-download">
-                Link download: {item.link}
+                Link download tài liệu: {item.link}
               </p>
 
               <div className="box-document-note">

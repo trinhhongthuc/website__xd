@@ -40,10 +40,10 @@ const Project = () => {
 
             <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <p className="project__paragraph">
-                Hình ảnh một số dự án đã được triển khai bởi đội ngũ{" "}
-                <b>iModel.vn.</b> Nội dung triển khai bao gồm: mô hình hóa, tạo
-                bản vẽ, thống kê, BIM 4D, shopdrawing, kiểm tra va chạm, phối
-                hợp CDE...
+                Đội ngũ giảng viên và kỹ sư nhiều năm kinh nghiệm của{" "}
+                <b>RESS</b> thực hiện các dự án trên các tỉnh thành. Một số dự
+                án <b>RESS</b> đã thực hiện trong năm 2021. Bao gồm cả thiết kế
+                và triển khai chi tiết hồ sơ bản vẽ thi công.
               </p>
             </div>
           </div>

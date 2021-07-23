@@ -1,0 +1,22 @@
+.h1 {
+}
+.wrapper {
+    &-recruit {
+        padding: 12px 0;
+        display: block;
+    }
+}
+.date {
+    &-update {
+        font-size: 16px;
+        color: #999;
+        margin-bottom: 0;
+    }
+}
+
+.box-recruit {
+    background: #f4f4f4;
+    color: $color-primary;
+    padding: 12px 20px;
+    font-size: 16px;
+}

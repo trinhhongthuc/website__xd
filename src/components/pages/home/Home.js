@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Banner from "./Banner";
-import Contact from "./Contact";
 import Counter from "./Counter";
 import Course from "./Course";
 import FeedBack from "./FeedBack";
@@ -52,8 +51,6 @@ const Home = () => {
           <Counter />
           <Project />
           <FeedBack />
-          <Contact />
-
           {hiddenNotify ? (
             <FormAnimation
               setHiddenNotify={setHiddenNotify}

@@ -16,26 +16,45 @@ const Introduce = () => {
               <span>V</span>ề chúng tôi
             </h1>
             <p className="introduce__paragraph">
-              <b>iModel.vn</b> trước đây lấy tên là{" "}
-              <b>"ACO - Công nghệ xây dựng"</b>. Do có sự thay đổi tích cực và
-              chuyên nghiệp hơn trong bộ máy hoạt động, cùng với sự kết hợp với
-              các nhân sự tài năng, nhiệt huyết mới nên đã chuyển tên thương
-              hiệu sang <b>iModel - Inside the Model. iModel.vn</b> là nhà cung
-              cấp dịch vụ đào tạo các phần mềm, giải pháp liên quan đến Công
-              nghệ BIM như Revit, Naviswork, Dynamo, C# Revit API... cho các cá
-              nhân và doanh nghiệp. <b>iModel.vn</b> có hơn 6 năm kinh nghiệm
-              trong việc đào tạo các phần mềm và triển khai dự án BIM. iModel.vn
-              đã đào tạo hàng trăm học viên và rất nhiều doanh nghiệp lớn như:
-              DELTA, Obayashi, Supershed, PCSC1, MDA E&C,...
+              Trong xu hướng công việc hiện nay, hầu như các công ty xây dựng
+              khi tuyển dụng nhân sự thiết kế hoặc triển khai hồ sơ đều yêu cầu
+              các bạn phải có tối thiểu ít nhất trên 1 năm kinh nghiệm ??? Vậy
+              làm sao để xin được vào các công ty như vậy ??? Trong khi các bạn
+              mới vừa tốt nghiệp hoặc trước giờ chỉ làm thi công ???
             </p>
+
+            <b>
+              <h3>
+                <b>Các bạn thân mến!</b>
+              </h3>
+            </b>
+
             <p className="introduce__paragraph">
-              Ngoài ra, <b>iModel.vn</b> cũng cung cấp các dịch vụ liên quan đến
-              BIM như mô hình hóa dự án, triển khai bản vẽ dự án, thống kê khối
-              lượng, BIM 4D, tạo add-in C# Revit API,.... <b>iModel.vn</b> tự
-              hào là nhà cung cấp dịch vụ, giải pháp hiệu quả, sản phẩm chất
-              lượng trong bối cảnh Công nghệ BIM đang trở thành xu thế ngành Xây
-              dựng tại Việt Nam.
+              Thực tế cho thấy sinh viên khi vừa tốt nghiệp đều vấp phải, ngay
+              cả những bạn có học lực khá và giỏi đó là “Vào thử việc thì không
+              làm được việc theo yêu câu”. Đó cũng là lý do mà nhiều công ty rất
+              quan ngại khi tuyển nhân sự mà chưa có kinh nghiệm. Vậy câu hỏi
+              làm sao để các bạn có thể đáp ứng được yêu cầu của công ty cần và
+              giúp cho doanh nghiệp bỏ đi những định kiến với sinh viên mới ra
+              trường và những anh em kỹ sư chưa có kinh nghiệm ??? Hiểu rõ những
+              vấn đề trên, trung tâm tin học Xây dựng RESS “ viết tắt của
+              Revit_Etabs_Safe_Sap_Da Nang” ra đời với mong muốn mang lại những
+              giá trị đào tạo thật sự, với phương châm đào tạo{" "}
+              <b>“ Học để làm việc_Học để ứng dụng”</b>.<br />
+              Để tránh sự nhàm chán cũng như tạo sức hấp dận lôi cuốn. Chúng tôi
+              áp dụng phương pháp đào tạo mới{" "}
+              <b>“Học hiểu_Học ứng dụng vào thực tế”</b>. Giúp học viên xâu
+              chuỗi các kiến thức trong nhà trường lồng vào đó là kiến thức thực
+              tế công viêc để giúp người học biết ý nghĩa và phương pháp làm
+              việc. Bạn sẽ tiếp thu kiến thức một cách chủ dộng và hệ thống. Hơn
+              thế nữa là một công việc như bạn mong muốn
             </p>
+
+            <b>
+              <h2>
+                Đó là những điều thật tuyệt vời. Tất cả chỉ có tại <b>RESS</b>!
+              </h2>
+            </b>
           </div>
 
           <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">

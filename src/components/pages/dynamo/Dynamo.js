@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Content from "./Content";
 import Information from "./Information";
-import Contact from "../home/Contact.js";
 import { animateScroll as scroll } from "react-scroll";
 
 const Dynamo = () => {
@@ -21,8 +20,6 @@ const Dynamo = () => {
 
       <Information />
       <Content />
-
-      <Contact />
     </div>
   );
 };

@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
-import logo from "../../image/logo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { contactForm } from "../../../redux/actions/action";
-
+import logoWebsite from "../../image/logo.jpg";
 const Contact = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -83,7 +82,7 @@ const Contact = () => {
                 <h1 className="contact__right__heading">Information</h1>
 
                 <ul className="contact__right__ul">
-                  <li className="contact__right__ul__li">iModel.vn</li>
+                  <li className="contact__right__ul__li">Ress.vn</li>
 
                   <li className="contact__right__ul__li">
                     Địa chỉ: Liên chiểu Đà Nẵng
@@ -95,15 +94,11 @@ const Contact = () => {
                     Facebook: https://www.facebook.com/ReSSDaNang
                   </li>
 
-                  <li className="contact__right__ul__li">
-                    Mail: insidethemodel@gmail.com
-                  </li>
-
                   <li className="contact__right__ul__li">Mobile: 0931626629</li>
                 </ul>
               </div>
               <div className="contact__right__logo">
-                <img src={logo} alt="" />
+                <img src={logoWebsite} alt="" />
               </div>
             </div>
           </div>

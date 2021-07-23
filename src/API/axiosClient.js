@@ -3,7 +3,7 @@ import queryString from "query-string";
 import jwt_decode from "jwt-decode";
 import LoginApi from "./LoginApi";
 import { Redirect } from "react-router-dom";
-const URL = "http://localhost:5000";
+const URL = "https://webapp-xd.herokuapp.com";
 const axiosClient = axios.create({
   baseURL: URL,
   headers: { "Content-Type": "application/json" },
@@ -17,7 +17,7 @@ axiosClient.interceptors.request.use(
 
       if (time.exp * 1000 < new Date().getTime()) {
         sessionStorage.clear();
-        <Redirect to="/login" />;
+        window.Redirect = "/login";
       }
     }
     config.headers.authorization = `Bearer ${sessionStorage.getItem("token")}`;

@@ -1,70 +1,59 @@
-import DocumentApi from "API/DocumentApi";
 import React, { useState, useEffect } from "react";
-import { useParams, useHistory } from "react-router-dom";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import RecruitApi from "API/RecruitApi";
+import { useHistory, useParams } from "react-router-dom";
 import { Ring } from "react-awesome-spinners";
 
-const DocumentAdminUpdate = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
+const RecruitAdminUpdate = () => {
   const history = useHistory();
-  const [value, setValue] = useState({
-    title: "",
-    link: "",
-    dateUpdate: "",
-  });
 
-  const [note, setNote] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const id = useParams().id;
 
-  useEffect(() => {
-    try {
-      DocumentApi.getDocumentById(id).then((data) => {
-        if (data && data.success) {
-          setNote(data.data.note);
-          setValue({
-            title: data.data.title,
-            link: data.data.link,
-          });
-          setIsLoading(false);
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }, [id]);
+  const [value, setValue] = useState({
+    title: "",
+    author: "",
+    status: "active",
+  });
+
+  const [description, setDescription] = useState("");
+
+  const onChangeDes = (event, editor) => {
+    const data = editor.getData();
+    setDescription(data);
+  };
 
   const onChangeValue = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
 
-  const onChangeNote = (event, editor) => {
-    const data = editor.getData();
-    setNote(data);
-  };
-
   const onSubmitForm = (e) => {
     e.preventDefault();
 
-    const rs = {
-      id: id,
-      title: value.title,
-      link: value.link,
-      note: note,
-    };
-
-    DocumentApi.updateDocumentById(rs)
+    RecruitApi.updateRecruit({ ...value, note: description, id })
       .then((data) => {
         if (data && data.success) {
-          history.push("/admin/tailieu");
+          history.push("/admin/tuyendung");
         }
       })
       .catch((err) => {
         console.error(err);
       });
   };
+
+  useEffect(() => {
+    RecruitApi.getRecruitById(id)
+      .then((data) => {
+        setValue({ title: data.data.title, author: data.data.author });
+        setDescription(data.data.note);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [id]);
 
   const style = {
     width: "100%",
@@ -86,9 +75,9 @@ const DocumentAdminUpdate = () => {
             <form className="form" onSubmit={(e) => onSubmitForm(e)}>
               <div className="row">
                 <div className="course__add_display">
-                  <div className="course__add__heading">Tài liệu</div>
+                  <div className="course__add__heading">Tuyển Dụng</div>
                   <button type="submit" className="course__add__addSub">
-                    Update tai lieu
+                    Update Tuyển dụng
                   </button>
                 </div>
               </div>
@@ -97,12 +86,12 @@ const DocumentAdminUpdate = () => {
                 <div className="col-xl-6 col-lg-6">
                   <div className="course__add__wrapper">
                     <div className="course__add__wrapper__input">
-                      <label htmlFor="">Tên tài liệu</label>
+                      <label htmlFor="">Tiêu đề</label>
                       <input
                         type="text"
                         name="title"
                         id=""
-                        placeholder="Enter name document"
+                        placeholder="Enter tiêu đề"
                         value={value.title}
                         onChange={(e) => onChangeValue(e)}
                         required
@@ -112,27 +101,25 @@ const DocumentAdminUpdate = () => {
 
                   <div className="course__add__wrapper">
                     <div className="course__add__wrapper__input">
-                      <label htmlFor="">Chú thích cho tài liệu</label>
+                      <label htmlFor="">Thông tin tuyển dụng</label>
                       <CKEditor
                         required
-                        data={note}
+                        data={description}
                         editor={ClassicEditor}
-                        onChange={(event, editor) =>
-                          onChangeNote(event, editor)
-                        }
+                        onChange={(event, editor) => onChangeDes(event, editor)}
                       />
                     </div>
                   </div>
 
                   <div className="course__add__wrapper">
                     <div className="course__add__wrapper__input">
-                      <label htmlFor="">Link dowload tài liệu</label>
+                      <label htmlFor="">Tác giả</label>
                       <input
                         type="text"
-                        name="link"
+                        name="author"
                         id=""
-                        placeholder="Link dowload tài liệu"
-                        value={value.link}
+                        placeholder="Tác giả"
+                        value={value.author}
                         onChange={(e) => onChangeValue(e)}
                         required
                       />
@@ -162,4 +149,4 @@ const DocumentAdminUpdate = () => {
   );
 };
 
-export default DocumentAdminUpdate;
+export default RecruitAdminUpdate;

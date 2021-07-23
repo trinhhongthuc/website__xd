@@ -39,13 +39,11 @@ const Course = () => {
 
               <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <p className="course_paragraph">
-                  Các khóa học tại iModel.vn là các khóa học có nội dung được
-                  đúc kết ra từ nhiều năm kinh nghiệm giảng dạy, kinh nghiệm
-                  triển khai dự án thực tế của các chuyên gia đạt chứng chỉ
-                  Autodesk Professional Certification của Autodesk cùng với chất
-                  lượng tốt nhất và chi phí rẻ nhất trên thị trường. Đặc biệt,
-                  iModel.vn có khóa học <b>ưu đãi đặc</b> biệt dành riêng cho
-                  các Em sinh viên (*).
+                  <b>RESS</b> cung cấp đến người học những kinh nghiệm và kiến
+                  thức được đúc kết từ nhiều năm giảng dạy ở Trường Đại học,
+                  Thiết kế các dự án , Triển khai hồ sơ của nhiều Giảng viên ở
+                  các Trường, Các kỹ sư nhiều năm kinh nghiệm và tham gia các dự
+                  án.
                 </p>
               </div>
             </div>

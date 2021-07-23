@@ -1,24 +1,25 @@
-import React, { useEffect } from "react";
+import RecruitApi from "API/RecruitApi";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import types from "redux/types";
 import { Ring } from "react-awesome-spinners";
 
-const DocumentAdmin = () => {
+const RecruitAdmin = () => {
   const dispatch = useDispatch();
 
-  const { isLoading, dataDocument } = useSelector(
-    (state) => state.DocumentReducerAdmin
-  );
-
   useEffect(() => {
-    try {
-      dispatch({ type: types.GET_ALL_DOCUMENT });
-    } catch (error) {}
+    dispatch({ type: types.GET_ALL_RECRUIT });
   }, [dispatch]);
 
+  const { isLoading, dataRecruit } = useSelector(
+    (state) => state.RecruitReducerAdmin
+  );
+
+  console.log(dataRecruit);
+
   const onClickDelete = (id) => {
-    dispatch({ type: types.DELETE_DOCUMENT, id });
+    dispatch({ type: types.DELETE_RECRUIT, payload: id });
   };
 
   const style = {
@@ -28,6 +29,7 @@ const DocumentAdmin = () => {
     justifyContent: "center",
     alignItems: "center",
   };
+
   return (
     <>
       {isLoading ? (
@@ -37,14 +39,14 @@ const DocumentAdmin = () => {
       ) : (
         <div className="admin">
           <div className="admin__course__wrapper">
-            <h1 className="admin__course__wrapper__heading">Khóa học</h1>
+            <h1 className="admin__course__wrapper__heading">Tuyển Dụng</h1>
 
             <div className="admin__course__wrapper__add">
               <Link
                 className="admin__course__wrapper__add__link"
-                to="/admin/tailieu/add"
+                to="/admin/tuyendung/add"
               >
-                Add Tài liệu
+                Add tuyển dụng
               </Link>
             </div>
           </div>
@@ -53,8 +55,8 @@ const DocumentAdmin = () => {
             <thead>
               <tr className="admin__course__title">
                 <td className="admin__course__id">ID</td>
-                <td className="admin__course__img">Link</td>
                 <td className="admin__course__name">Title</td>
+                <td className="admin__course__name">author</td>
                 <td className="admin__course__status">trang thai</td>
                 <td className="admin__course__manipulation" colSpan="3">
                   thao tac
@@ -63,27 +65,26 @@ const DocumentAdmin = () => {
             </thead>
 
             <tbody>
-              {dataDocument?.map((item) => {
+              {dataRecruit?.map((item) => {
                 return (
                   <tr key={item._id}>
                     <td> {item._id}</td>
-                    <td className="admin__course__item__img">{item.link}</td>
-
                     <td>
                       {item.title.length > 25
                         ? item.title.slice(0, 25) + "..."
                         : item.title}
                     </td>
+                    <td>{item.author}</td>
                     <td>{item.status}</td>
 
                     <td>
-                      <Link to={`/admin/tailieu/update/${item._id}`}>
+                      <Link to={`/admin/tuyendung/update/${item._id}`}>
                         Update
                       </Link>
                     </td>
 
                     <td>
-                      <Link disabled to={`/admin/tailieu/detail/${item._id}`}>
+                      <Link disabled to={`/admin/tuyendung/detail/${item._id}`}>
                         Xem chi tiet
                       </Link>
                     </td>
@@ -107,4 +108,4 @@ const DocumentAdmin = () => {
   );
 };
 
-export default DocumentAdmin;
+export default RecruitAdmin;

@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header" id="header">
           <div className="header__logo">
             <Link to="/home" className="header__logo__link">
-              Imodel<span>.</span>vn
+              RESS<span>.</span>VN
             </Link>
           </div>
           <nav className="header__navbar">
